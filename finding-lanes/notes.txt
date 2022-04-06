@@ -1,0 +1,31 @@
+Gradient: Measure of change in brightness over adjacent pixels
+
+Strong gradient: 0 -> 255
+Small gradient:  0 -> 15 
+
+
+Starting from left-top corner
+X = width  (row)
+Y = height (column)
+
+derivate(f(x,y)) -> measures adjacent changes in intensity in all directions
+The displayed edge represents a high change in intensity, exceeding the threshold
+
+
+Line equation -> y = mx + b
+
+
+Identifying lines on gradient images:
+
+Hough Space -> coordinates based on B(y) and M(x) 
+
+We will take the the gradient image which has a series of white points representing edges in our image space.
+To identify the lines, ww will take those points and represent the candidate lines on the hough space,
+by splitting the houghspace into a grid we will have multiple bins (squares) with crossing lines. The bin with highest count
+of intersections will be the M and B values for our line that best fits our data.
+
+Use Rho and Theta to find our line without getting mathematical issues
+
+ρ <- Rho
+Θ <- Theta
+Line that best fits data => ρ = x*cos(Θ) + y*sin(Θ)
