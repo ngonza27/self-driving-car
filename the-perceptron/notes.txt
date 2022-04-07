@@ -1,0 +1,46 @@
+Classification linear model
+  Represented by the fllowing equation: 
+    - w1(x1) + w2(x2) + bias        (w1 & w2 -> weights)
+
+  The classification algorithm will try different weights and bias until it comes up with the optimized line and the error is minimized.
+
+  Prediction representation -> ŷ
+
+
+Perceptrons:
+  Most basic for of neuronal network, its a processing element that generates an output based on a predictive model.
+  In neuronal networks, the activation function of a node is what defines the output.
+    - Most basic activation function is the step function (discrete), classifies into a binary output of 1 or 0.
+
+    INPUT -> PERCEPTRON -> ACTIVATION FUNCTION -> OUTPUT
+
+Weights:
+  - The input with the highest weight is the one that has the larger effect on the score.
+
+Error Function:
+  - The error function will be the base to determine wether the linear model defines a good classification.
+  - The error function will take into account the sum of the penalties, how each data was classified, and determine the overall error.
+    The weights will be tweaked in order to minimize the error.
+
+Sigmoid Function:
+  - Equacion: 1/(1 + e^-x)
+  - The sigmoid function is no longer a discrete function. It can give us several values that we can interpret as a percentage of being classified as an X group.
+
+Cross Entropy:
+  p - probability (given by sigmoid function)
+  y - lable of 0 or 1, depending of the classification
+  n - ammount of data.
+
+  Error =  - Sumatoria( y * Ln(p) + (1-y)*(Ln(1-p))) * (1/n)
+
+
+Gradient Descent:
+  pts - points
+  p   - probability 
+  y   - label
+  m   - number of points
+  GradientDescent Err = (pts * (p-y)) /m
+  Error minimization = Line parameters(w1, w2, b) - gradient
+
+
+Note: rewatch cross entropy and gradient descent
