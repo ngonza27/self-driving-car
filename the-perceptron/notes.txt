@@ -27,6 +27,7 @@ Sigmoid Function:
   - The sigmoid function is no longer a discrete function. It can give us several values that we can interpret as a percentage of being classified as an X group.
 
 Cross Entropy:
+  - Is the sumation of logarithms
   p - probability (given by sigmoid function)
   y - lable of 0 or 1, depending of the classification
   n - ammount of data.
@@ -35,6 +36,8 @@ Cross Entropy:
 
 
 Gradient Descent:
+  - The gradient is the derivative with respect to the weights
+  - The gradient is substratced on each iteration in order to reduce the error.
   pts - points
   p   - probability 
   y   - label
@@ -42,5 +45,3 @@ Gradient Descent:
   GradientDescent Err = (pts * (p-y)) /m
   Error minimization = Line parameters(w1, w2, b) - gradient
 
-
-Note: rewatch cross entropy and gradient descent
