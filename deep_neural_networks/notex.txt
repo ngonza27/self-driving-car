@@ -1,0 +1,28 @@
+Deep Neural Networks
+
+Deep neural networks lead to convolutional neural networks
+
+We can linearly combine existing models to create new models that better clasify our data, is the core of neural networks.
+Neural Networks: combination of models to obtain more complex, non-linear models that best classify our data.
+
+Input layer:
+    - The weights indicate the equation of the linear model, and this weights are used to obtain outputs.
+
+Architecture: Input Layer -> Hidden layer(set of linear models) -> Output Layer
+
+
+Feed-forward
+ -  There aren't any feedback loops or connections ti nthe network, simply an input layer, hidden layer(can be many), and output layer
+Thre process of receiving an input to produc esome kind of output to make some kind of prdiction is known as feed forward feed.
+
+Error function:
+    Cross Entropy is used to determine the total error:
+    - Is the sumation of logarithms
+    p - probability (given by sigmoid function)
+    y - lable of 0 or 1, depending of the classification
+    n - ammount of data.
+
+    Error =  - Sumatoria( y * Ln(p) + (1-y)*(Ln(1-p))) * (1/n)
+
+    Gradient:
+        The derivative of the error function wit hrespect to all the weights on our neural network
