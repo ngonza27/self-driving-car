@@ -1,0 +1,33 @@
+Softmax function
+    Is the replacement of the sigmoid function in order to determine how to classify the data.
+    Softmax function is usefull for multiclass classsification
+    
+    1. The relative magnitude must be mantained (the scores (probabilities) of the data must stay the same)
+    2. All probabilities values must add up to one (1)
+
+    Softmax function:
+        m = score
+        n = number of classes
+        P(score m) = e^m / Sumation[i=1, hasta n](e^i) 
+
+One hot encoding
+    Allows us to classify all of our classes without assuming any dependence betweeen the classes
+    Ex:
+            Ball Type   | Value1   | Value2 | Value3   | Label
+            Soccer ball |   1      |    0   |    0     |  100
+            Basketball  |   0      |    1   |    0     |  010
+            Volleyball  |   0      |    0   |    1     |  001
+Cross Entropy:
+    Is a method of measuring erro within any neural network.
+
+    Categorical Cross Entropy formula:
+        i = row index
+        j = column index
+        P = probability
+        n = number of labels
+        m = number of predictions
+        - Sumation[i=1, n] Sumation[j=1, m](Ln(Pij))
+
+        Note: on the first sumation, the value1 of soccer ball is 1, then we will use the result of that
+              Ln(p) in order to get its probability of being a soccer ball, as value2 for soccer ball is 0,
+              it will cancel out. We just need to know to which independent class it belongs. 
