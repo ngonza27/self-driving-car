@@ -12,8 +12,8 @@ Architecture: Input Layer -> Hidden layer(set of linear models) -> Output Layer
 
 
 Feed-forward
- -  There aren't any feedback loops or connections ti nthe network, simply an input layer, hidden layer(can be many), and output layer
-Thre process of receiving an input to produc esome kind of output to make some kind of prdiction is known as feed forward feed.
+ -  There aren't any feedback loops or connections in the network, simply an input layer, hidden layer(can be many), and output layer
+The process of receiving an input to produce some kind of output to make some kind of prediction is known as feed forward feed.
 
 Error function:
     Cross Entropy is used to determine the total error:
