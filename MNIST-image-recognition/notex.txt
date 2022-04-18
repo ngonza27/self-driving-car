@@ -1,0 +1,36 @@
+Dataset
+    A large dataset can be split into: Training Set, Validation Set, Test Set.
+    Training Set: used to train the model( 3-4x times the validation set )
+    Test Set: used to test the trained model
+
+Generalization
+    The ability to correctly classify newly inputted data which don't have a label.
+    
+    "The more we minimize the training error, the bigger the test error".
+
+Underfitting: when your model isnt provided with the sufficient capacity for it to be able to capture the  data underlying trend.
+    - Doesn't have capacity to fi the trainign data.
+
+
+Overgfitting: model performs well on training data but does not perform accurately on test data.
+    - When training error is low and test error high, we have an overfitted model.
+    - possible solution: - reduce depth and complexity of the network
+                         - reduce number of epochs
+                         - larger datasets(can help)
+
+    Best model is the one with lowest error and closest gap between training and generalization errror.
+    Note: Don't let  training error go lower than validation error
+Validation Set:
+    Set of examples used to fine tune the Hyperparameters of a classifier.
+
+Hyperparameters
+    Used to control the behavior of the learning algorithm
+    Ex: learning rate, number of nodes per layer, number of hidden layers, Neural network depth, etc.
+    NN - neural netwok
+    Deeper the NN, the higher the capacity to learn
+
+    Stages: 
+        Training: minimize training error
+        Validation: tune hyperparameters
+
+Img: 'https://colah.github.io/posts/2014-10-Visualizing-MNIST/img/mnist_pca/MNIST-p1815-4.png'
