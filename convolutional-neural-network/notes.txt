@@ -1,0 +1,60 @@
+Convolutional Neural Networks (CNN ConvNets)
+    - Convolution is a mathematical way of combining two signals to form a third signal.
+    - Most popular deep learning architecture
+    - Most effective at face recognition, object detection, identifing objects.
+     
+CNN layers:
+    Feature extraction: Convolutional Layer and Pooling Layer.
+    Classication: Fully connected layers.
+
+    Layers:
+    - Input layer
+    
+    - Convolutional layer - main buildin block
+        - Extract and learn specific image features, features that can be used to classify an image.
+        - Each pixel is proccesed by a convolutional filter (Kernel/Kernel Matrix)
+            [Kernel - a feature detector]
+        - 3x3 kernel => 3 by 3 convolution
+        - Perform convolutional opperation by sliding he kernel at every location of the image.
+          The amount by which we're shifting the kernel at every opertaion is known as the Stryde.
+          Ex: Stryde of 1, the kernel matrix moves one pixel at a time.
+        - Kernel matrix is multiplied and averaged for every checked Stryde in order to fill the feature map.
+        - The more Kernels we have, more features we can identify.
+        - The depth of the kernel must match the depth of the image.
+    
+    - Pooling layers
+        Shrink the image stack by reducing the dimensionality of the representation of each feature map,
+        thereby reducing the computational complexity of the model
+        - Helps reduce overfitting by reducing the number of parameters and computations in the network
+          by providing a more abstracted generalised representation of the feature map.
+        - Max pooling -> reports the maximum value within a rectangular neighborhood
+    
+    - Fully connected layers
+         Fully connected network is responsible in taking these features as inputs, processing them to obtain
+         a final probability as to what class the image belongs to.
+
+    - Output layer
+
+
+
+Relu Function
+    Returns a value of zero if the input is negative, if the input is positive, it will return the same value
+    - y=0
+    - y=x
+
+LeNet
+    Was an architecture originaly designed to be able to recognize handwriten numbers on checks
+    - Has the bas architecture ofe CNN: 
+      input-> convolutional layer1 -> pool1 -> convolutional layer2 -> pool2 -> Fully connected layer-> output
+
+    Note:   more filters -> more parameters -> more computing power
+            Conv2D Parameters:
+                - Use the padding argument when there is relevant information at the borders of the image.
+                - Stride: default value = 1
+
+
+Drop Out Layers
+    Will randomly turn off the communication of some neurons in order to force the network to learn an adapt to the data and improving the overall weight distribution and accuracy.
+    - Drop Out Layers are offten placed between layers with high number of parameters.
+    - parameters: fraction rate = amount of input nodes that the dropout layer drops during each update (0.5 is recomended)
+Img: 'https://printables.space/files/uploads/download-and-print/large-printable-numbers/3-a4-1200x1697.jpg'
