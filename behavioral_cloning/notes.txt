@@ -1,0 +1,10 @@
+Nvidia Model
+    Popular architecture used for behavioral cloning.
+
+Dead ReLU
+    The ReLU activation function can sometimes "die" and only feeds a value of 0 to de posterior nodes.
+
+ELU activation function
+    Is exactly like the ReLU in the positive region, however in the negative region the ELU returns a negative number.
+    - ELU has a non-zero gradient value in the negative region.
+    - The ELU function has the chance to recover and fix its weight parameters
